@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do formulário de cadastro */
+#cadastro {
+    background-image: url(img/fundo_cadastro1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Contêiner principal */
+.container {
+    background-color: white;
+    border-radius: 9px;
+    padding: 50px;
+    max-width: 500px;
+    margin: 100px auto 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #050505;
+    font-weight: 500;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+@media (min-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Cabeçalho do formulário */
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 40px;
+}
+
+.form-header img {
+    margin-bottom: 8px;
+    max-width: 45px;
+    height: auto;
+}
+
+.form-header h1 {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #000000;
+}
+
+.form-header2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form-header2 h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.form-header2 p {
+    font-size: 0.9em;
+    font-weight: lighter;
+    color: #1f1e1e;
+}
+
+/* Labels e textos auxiliares */
+.form-label {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #1d1d1d;
+    margin-bottom: 2px;
+    margin-left: 3px;
+}
+
+.form-text {
+    font-size: 0.7em;
+    font-weight: 500;
+    color: #313131;
+    margin-bottom: 3px;
+    margin-left: 4px;
+}
+
+/* Botões */
+.btn {
+    border-radius: 10px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}

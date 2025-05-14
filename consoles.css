@@ -1,0 +1,779 @@
+/*Consoles*/
+
+body {
+    overflow-x: hidden;
+}
+
+.consoles {
+    display: flex;     
+    flex-direction: column;         /* Define a exibição como flexbox */
+    justify-content: flex-start; /* Alinha ao topo verticalmente */
+    align-items: flex-start;         /* Centraliza verticalmente */
+    height: 100vh;              /* Define a altura do contêiner como 100% da altura da viewport */
+    padding: 10% 10%;
+    height: auto;
+}
+
+.consoles h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    letter-spacing: 15px;
+    margin-bottom: 2px;  
+}
+
+.consoles h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    letter-spacing: 32px;
+    text-align: center; 
+}
+
+.consoles p {
+    width: 350px;
+    font-size: 15px;
+    padding-bottom: 150px;
+}
+
+/*Primeiro container*/
+
+.containerV {
+    position: absolute;
+    top: 230px; /* Define a posição do contêiner na tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajuste para alinhar ao centro */
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
+    border-radius: 20px;
+}
+
+.containerV img {
+    position: absolute;
+    left: 8%; /* Centraliza horizontalmente */
+    top: -15px;
+}
+
+.linhadata {
+    width: 3px;                     /* Espessura da linha */
+    height: 615%;                   /* Altura relativa à altura da viewport */
+    background-color: black;
+    position: absolute;             /* Para posicionamento livre */
+    right: 10%;                      /* Margem direita relativa ao tamanho da tela */
+    top: 25%;
+}
+
+.linhaver {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+}
+
+.data1 {
+    position: absolute;
+    right: 18%;
+    top: 41%;
+}
+
+.data1 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 7px;
+    
+}
+
+.container2 {
+    position: absolute;
+    top: 660px; /* Altere o valor para posicionar mais abaixo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
+    border-radius: 20px;
+}
+
+.container2 img {
+    position: absolute;
+    right: -15px;
+    top: -20px;
+    width: 280px;
+    
+}
+
+.linhaver2 {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 112%;
+}
+
+.data1_2 {
+    position: absolute;
+    right: 18%;
+    top: 103%; /* Ajuste para posicionar o texto do ano */
+}
+
+.data1_2 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 7px;
+}
+
+.container3 {
+    position: absolute;
+    top: 1100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
+    border-radius: 20px;
+}
+
+.container3 img {
+    position: absolute;
+    width: 220px;
+    left: 15px;
+}
+
+.linhaver3 {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 174%;
+}
+
+.data1_3 {
+    position: absolute;
+    right: 18%;
+    top: 165%; /* Ajuste para posicionar o texto do ano */
+}
+
+.data1_3 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 7px;
+}
+
+.container4 {
+    position: absolute;
+    top: 1535px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
+    border-radius: 20px;
+}
+
+.container4 img {
+    position: absolute;
+    right: 50px;
+    top: -170px;
+}
+
+.linhaver4 {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 236%;
+}
+
+.data1_4 {
+    position: absolute;
+    right: 18%;
+    top: 227%; /* Ajuste para posicionar o texto do ano */
+}
+
+.data1_4 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 7px;
+}
+
+.container5 {
+    position: absolute;
+    top: 1930px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
+    border-radius: 20px;
+}
+
+.container5 img {
+    width: 250px;
+}
+
+.linhaver5 {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 298%;
+}
+
+.data1_5 {
+    position: absolute;
+    right: 18%;
+    top: 289%; /* Ajuste para posicionar o texto do ano */
+}
+
+.data1_5 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 7px;
+}
+
+.consoles h1.polystation {
+    letter-spacing: 4px;
+}
+
+.container6 {
+    position: absolute;
+    top: 2360px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
+    border-radius: 20px;
+}
+
+.container6 img {
+    width: 250px;
+}
+
+.linhaver6 {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 360%;
+}
+
+.data1_6 {
+    position: absolute;
+    right: 18%;
+    top: 351%; /* Ajuste para posicionar o texto do ano */
+}
+
+.data1_6 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 7px;
+}
+
+.container7 {
+    position: absolute;
+    top: 2795px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
+    border-radius: 20px;
+}
+
+.container7 img {
+    position: absolute;
+    width: 250px;
+    right: 10px;
+}
+
+.linhaver7 {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 422%;
+}
+
+.data1_7 {
+    position: absolute;
+    right: 18%;
+    top: 413%; /* Ajuste para posicionar o texto do ano */
+}
+
+.data1_7 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 7px;
+}
+
+.container8 {
+    position: absolute;
+    top: 3240px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
+    border-radius: 20px;
+}
+
+.container8 img {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 220px;
+}
+
+.linhaver8 {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 484%;
+}
+
+.data1_8 {
+    position: absolute;
+    right: 18%;
+    top: 475%; /* Ajuste para posicionar o texto do ano */
+}
+
+.data1_8 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 7px;
+}
+
+.container9 {
+    position: absolute;
+    top: 3670px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
+    border-radius: 20px;
+}
+
+.container9 img {
+    position: absolute;
+    left: 10px;
+    width: 220px;
+}
+
+.linhaver9 {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 546%;
+}
+
+.data1_9 {
+    position: absolute;
+    right: 18%;
+    top: 537%; /* Ajuste para posicionar o texto do ano */
+}
+
+.data1_9 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 7px;
+}
+
+.container10 {
+    position: absolute;
+    top: 4100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
+    border-radius: 20px;
+}
+
+.container10 img {
+    width: 250px;
+}
+
+.linhaver10 {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 608%;
+}
+
+.data1_10 {
+    position: absolute;
+    right: 18%;
+    top: 599%; /* Ajuste para posicionar o texto do ano */
+}
+
+.data1_10 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 7px;
+}
+
+.consoles h1.cons_final {
+    all: unset;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    font-weight: bolder;
+    margin: auto;
+    letter-spacing: 7px;
+    margin-bottom: 40px;
+}
+
+.consoles p.par_final {
+    all: unset;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    width: 1000px;
+    text-align: justify;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+@media screen and (max-width: 1325px) {
+    .containerV, .container2, .container3, .container4,
+    .container5, .container6, .container7, .container8,
+    .container9, .container10 {
+        width: 200px; /* Reduz a largura dos containers */
+        height: 200px; /* Mantém altura ajustável */
+        margin-left: 70px; /* Adiciona espaçamento entre os elementos */
+    }
+
+    .containerV img {
+        width: 400px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+    }
+
+    .container2 img {
+        width: 220px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+        position: relative;
+        top: 2px;
+        right: 10px;
+    }
+
+    .container3 img {
+        width: 170px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+    }
+
+    .container4 img {
+        width: 400px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+        position: relative;
+        right: 230px;
+        top: -130px;
+    }
+
+    .container5 img, .container6 img, .container7 img, .container9 img, .container10 img {
+        width: 200px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+    }
+
+    .container8 img {
+        width: 180px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+    }
+
+    .container9 img {
+        width: 180px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+    }
+
+    .linhadata, .linhaver, .linhaver2, .linhaver3, .linhaver4,
+    .linhaver5, .linhaver6, .linhaver7, .linhaver8, .linhaver9,
+    .linhaver10 {
+        display: none;
+    }  
+    
+    .data1, .data1_2, .data1_3, .data1_4, .data1_6, .data1_7, .data1_8, .data1_9, .data1_10 {
+        position: absolute;
+        right: 150px;
+    }
+
+    .data1_5 {
+        position: absolute;
+        right: 150px;
+        top: 1950px;
+    }
+
+    .data1_6 {
+        position: absolute;
+        right: 150px;
+        top: 2400px;
+    }
+
+    .data1_7 {
+        position: absolute;
+        right: 150px;
+        top: 2825px;
+    }
+
+    .data1_8 {
+        position: absolute;
+        right: 150px;
+        top: 3270px;
+    }
+
+    .data1_9 {
+        position: absolute;
+        right: 150px;
+        top: 3710px;
+    }
+
+    .data1_10 {
+        position: absolute;
+        right: 150px;
+        top: 4130px;
+    }
+
+    .dreamwave {
+        all: unset;
+        letter-spacing: 2px;
+    }
+
+    .consoles h2 {
+        font-size: 18px;
+    }
+
+    .consoles p.par_final {
+        width: 700px;
+    }
+}   
+
+@media screen and (max-width: 1000px) {
+    .consoles h1.primeiro_h1 {
+        all: unset;
+        font-size: 45px;
+        margin: auto;
+        letter-spacing: 10px;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 45px;
+        font-optical-sizing: auto;
+        font-weight: bolder;
+        letter-spacing: 15px;
+        margin-bottom: 2px;  
+    }
+    .consoles h1 {
+        font-size: 45px;
+        letter-spacing: 10px;
+        margin: auto;
+        margin-top: 150px;
+        position: relative;
+    }
+    .consoles h2 {
+        font-size: 18px;
+        letter-spacing: 20px;
+        margin: auto;
+    }
+    .consoles p {
+        width: auto;
+        font-size: 20px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    
+    .data1,  .data1_2, .data1_3 ,.data1_4, .data1_5, .data1_6, .data1_7, .data1_8, .data1_9, .data1_10 {
+        display: none;
+    }
+
+    .containerV, .container2, .container3, .container4,
+    .container5, .container6, .container7, .container8,
+    .container9, .container10 {
+        position: relative;
+        top: -20px;
+        left: 100px;
+        width: 220px;
+        height: 220px;
+        margin: -100px auto;
+    }
+    .consoles h1.cons_final {
+        margin: auto;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        font-size: 37px;
+    }
+    .consoles p.par_final {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 864px) {
+    .consoles p.par_final {
+        font-size: 15px;
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .consoles {
+        align-items: center;
+    }
+    .consoles h1.primeiro_h1 {
+        all: unset;
+        margin: auto;
+        letter-spacing: 7px;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 35px;
+        font-optical-sizing: auto;
+        font-weight: bolder;
+        letter-spacing: 15px;
+        margin-bottom: 2px;  
+    }
+    .consoles h1 {
+        font-size: 35px;
+        letter-spacing: 7px;
+        text-align: center;
+        margin-top: 70px;
+    }
+    .consoles h2 {
+        font-size: 16px;
+        letter-spacing: 10px;
+    }
+    .consoles p {
+        font-size: 15px;
+        padding-bottom: 50px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .containerV, .container2, .container3, .container4,
+    .container5, .container6, .container7, .container8,
+    .container9, .container10 {
+        position: relative;
+        top: -20px;
+        left: 100px;
+        width: 220px;
+        height: 220px;
+        margin: auto;
+    }
+    .linhadata, .linhaver, .linhaver2, .linhaver3, .linhaver4,
+    .linhaver5, .linhaver6, .linhaver7, .linhaver8, .linhaver9,
+    .linhaver10 {
+        display: none;
+    }
+
+    .data1, .data1_2, .data1_3 , .data1_4, .data1_5, .data1_6, .data1_7, .data1_8, .data1_9, .data1_10 {
+        display: none;
+    }
+
+    .consoles h1.cons_final {
+        margin: auto;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+
+    .consoles p.par_final {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .consoles h1.cons_final {
+        margin: auto;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+
+    .consoles p.par_final {
+        font-size: 15px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .containerV, .container2, .container3, .container4,
+    .container5, .container6, .container7, .container8,
+    .container9, .container10 {
+        position: relative;
+        top: -20px;
+        width: 220px;
+        height: 220px;
+        margin: auto;
+        margin-left: 100px;
+    }
+
+    .consoles h1.cons_final {
+        margin: auto;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        font-size: 23px;
+        letter-spacing: 5px;
+    }
+
+    .consoles p.par_final {
+        font-size: 15px;
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .consoles h1 {
+        font-size: 22px;
+        letter-spacing: 5px;
+    }
+    .consoles h2 {
+        font-size: 14px;
+        letter-spacing: 7px;
+    }
+    .consoles p {
+        font-size: 10px;
+    }
+    .containerV, .container2, .container3, .container4,
+    .container5, .container6, .container7, .container8,
+    .container9, .container10 {
+        width: 90%;
+        margin: 10px auto;
+        
+    }
+    .data1, .data1_2, .data1_3 , .data1_4, .data1_5, .data1_6, .data1_7, .data1_8, .data1_9, .data1_10 {
+        display: none;
+    }
+}

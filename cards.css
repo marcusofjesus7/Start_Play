@@ -1,0 +1,328 @@
+@charset "UTF-8";
+
+/* Regras de Estilo Global*/
+*{
+    font-family: 'Roboto Flex', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3vw;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-top: 110px;
+    margin-bottom: 100px;
+    color: #000000ea;
+    background: linear-gradient(90deg ,transparent, #d4d4d460, transparent);
+    padding: 20px; 
+}
+
+@media (max-width: 850px) {
+    .section-title{
+        font-size: 4vw;
+        margin-bottom: 130px;
+    }
+}
+
+/* Estilo do corpo do card*/
+.card-body {
+  background-color: white;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.411);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 150px;
+}
+
+.card-body:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.712); 
+}
+
+/* Estilos para o article*/
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    padding: 40px;
+    margin-left: 20px;
+}
+
+/* Estilo da imagem do article*/
+.container img {
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.349);
+}
+
+/* Estilo para o texto do article*/
+.game-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.game-details h2 {
+    font-size: 2.5vw; 
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #000000e1; 
+    white-space: nowrap; 
+}
+
+.info {
+    display: flex; 
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.info strong {
+    width: 150px; 
+    font-size: 1.1vw;
+    font-weight: bold;
+    color: #000000e1;
+    white-space: nowrap;
+    margin-left: 5px;
+}
+
+.info p {
+    font-size: 1vw;
+    color: #0067b8;
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+/* Estilo para o aside*/
+.requisitos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.requisitos-minimos{
+    flex: 1;
+    padding: 20px 0px 30px 70px;
+}
+
+.requisitos-recomendados{
+    flex: 1;
+    padding: 20px 70px 30px 0px;
+}
+
+/* Estilo para os textos do aside*/
+.requisitos-minimos h3,
+.requisitos-recomendados h3 {
+    font-size: 1.7vw; 
+    margin-bottom: 50px; 
+    font-weight: 700;
+    color: #000000e1;
+}
+
+.requisitos-minimos strong,
+.requisitos-recomendados strong{
+    font-size: 1.2vw; 
+    font-weight: 600;
+    color: #000000d8;
+}
+
+.requisitos-minimos p,
+.requisitos-recomendados p {
+    font-size: 1vw;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #5a5a5a;
+    width: 90%;
+}
+
+/*Estilo separação*/
+hr{
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 90%;
+}
+
+/*Estilo para a section game-sinopse*/
+.sinopse{
+    font-size: 2vw;
+    font-weight: 800;
+    text-align: center;
+    margin: 50px 0px 30px 0px;
+    letter-spacing: 1px;
+    color: #000000e1;
+}
+
+.explicacao{
+    text-align: center;
+    font-size: 1.1vw;
+    width: 45%;
+    margin: auto;
+    padding-bottom: 80px;
+    font-weight: 500;
+    color: #383838;
+}
+
+/*AJUSTANDO CONTEÚDO PARA RESPONSIVIDADE*/
+@media (max-width: 1100px) {
+    /*Estilos article*/
+    .container{
+        margin: 0px;
+        margin-left: 20px;
+        gap: 30px;
+    }
+
+    .container img {
+        width: 35%;
+    }
+
+    .container .game-details h2{
+        font-size: 2vw;
+    }
+
+    .info {
+        display: flex;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .info strong{
+        font-size: 1.2vw;
+    }
+
+    .info p{
+        font-size: 1vw;
+    }
+}
+
+
+@media (max-width: 900px) {
+    /*Estilo article*/
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+    }
+
+    .container img {
+        width: 40%;
+    }
+
+    .container .game-details h2 {
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    .info strong{
+        margin-left: 10px;
+    }
+
+    /* Estilo aside*/
+    .requisitos{
+        gap: 30px;
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+
+    /*Estilo separação*/
+    hr{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 850px) {
+    /* Estilo para o article */
+    .game-details h2 {
+        font-size: 3vw;
+    }
+
+    .info {
+        display: block;
+        text-align: center;
+        line-height: 2;
+    }
+
+    .info strong{
+        margin: 0%;
+        font-size: 2vw;
+    }
+
+    .info p{
+        font-size: 1.5vw; 
+    }
+
+    /* Estilo para o aside */
+    .requisitos {
+        display: flex;
+        align-items: center;
+        flex-direction: column; 
+        gap: 50px;
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .requisitos-minimos{
+        flex: 1;
+        padding:  20px 0px 0px 0px;
+    }
+
+    .requisitos-recomendados{
+        flex: 1;
+        padding: 0px;
+    }
+
+
+    /* Estilo para textos aside*/
+    .requisitos-minimos h3,
+    .requisitos-recomendados h3{
+        font-size: 2.5vw;
+    }
+
+    .requisitos-minimos strong,
+    .requisitos-recomendados strong{
+        display: block;
+        font-size: 1.9vw;
+    }
+
+    .requisitos-minimos p,
+    .requisitos-recomendados p{
+        display: block;
+        font-size: 1.5vw; 
+       
+    }
+
+    /*Estilo para a section game-sinopse*/
+    .sinopse{
+        font-size: 2.5vw;
+    }
+    
+    .explicacao{
+        font-size: 1.4vw;
+        width: 60%;
+    }
+}
+
+@media (max-width: 700px) {
+    /* Estilo do corpo do card*/
+    .card-body {
+        width: 80%;
+        margin: auto;
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    .card-body:hover{
+        transform: scale(1.05);
+    }
+
+    /*Estilo do article*/
+    .game-details h2 {
+        font-size: 3.5vw;
+    }
+}
