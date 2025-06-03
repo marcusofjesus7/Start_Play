@@ -47,6 +47,7 @@
             </div>
             <!-- Formulário de cadastro -->
              <?php
+                include_once 'conexao.php'; // Inclui o arquivo de conexão com o banco de dados
                 $erros = []; // Array para armazenar mensagens de erro
                 $dados = []; // Array para armazenar os dados do formulário
 
@@ -82,7 +83,7 @@
                     }
 
                     function validarSexo($sexo) {
-                        if ($sexo == "s") return "O campo sexo é obrigatório.";
+                        if ($sexo == "S") return "O campo sexo é obrigatório.";
                         return null;
                     }
 
@@ -232,24 +233,39 @@
 
                     // Se não houver erros, exibe o modal de sucesso
                     if (empty(array_filter($erros))) {
-                        echo "
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function () {
-                                // Exibe o modal
-                                var successModal = new bootstrap.Modal(document.getElementById('successModal'));
-                                successModal.show();
-                    
-                                // Redireciona automaticamente após 5 segundos
-                                setTimeout(function () {
-                                    window.location.href = 'index.php';
-                                }, 5000);
-                    
-                                // Cancela o redirecionamento automático se o modal for fechado manualmente
-                                document.getElementById('successModal').addEventListener('hidden.bs.modal', function () {
-                                    window.location.href = 'index.php';
-                                });
-                            });
-                        </script>";
+                        //1. Inserir usuário
+                        $sql_usuario = "INSERT INTO usuario (nomecompleto, datanascimento, sexo, nomematerno, cpf, email, telefonecelular, telefonefixo, login, senha) 
+                        VALUES ('{$dados['nome_completo']}', '{$dados['data_nascimento']}', '{$dados['sexo']}', '{$dados['nome_materno']}', '{$dados['cpf']}', '{$dados['email']}', '{$dados['telefone_celular']}', '{$dados['telefone_fixo']}', '{$dados['login']}', '{$dados['senha']}')";
+                        
+                        if(mysqli_query($conn, $sql_usuario)){
+                            // 2. Recuperar o id do usuário inserido
+                            $id_usuario = mysqli_insert_id($conn);
+
+                            // 3. Inserir endereço
+                            $sql_endereco = "INSERT INTO endereco (id_usuario, cep, logradouro, numero, complemento, bairro, cidade, uf)
+                            VALUES ($id_usuario, '{$dados['cep']}', '{$dados['endereco']}', '{$dados['numero']}', '{$dados['complemento']}', '{$dados['bairro']}', '{$dados['cidade']}', '{$dados['uf']}')";
+                            
+                            if(mysqli_query($conn, $sql_endereco)){
+                                // Exibe o modal de sucesso
+                                echo"
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                            var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                                            successModal.show();
+                                            setTimeout(function () {
+                                                window.location.href = 'index.php';
+                                            }, 5000);
+                                            document.getElementById('successModal').addEventListener('hidden.bs.modal', function () {
+                                                window.location.href = 'index.php';
+                                            });
+                                        });
+                                    </script>";
+                            } else {
+                                echo "<p style='color:red;'>Erro ao salvar endereço: " . mysqli_error($conn) . "</p>";
+                            }
+                        } else {
+                            echo "<p style='color:red;'>Erro ao salvar usuário: " . mysqli_error($conn) . "</p>";
+                        }
                     }
                 }
              ?>
@@ -272,10 +288,10 @@
                     <div class="col-md-6 mb-3">
                         <label for="sexo" class="form-label">Sexo:</label>
                         <select id="sexo" name="sexo" class="form-select" required>
-                            <option value="s"<?php echo htmlspecialchars($dados['sexo'] ?? '') ?> name = "s">Selecione</option>
-                            <option value="masculino" <?php echo htmlspecialchars($dados['sexo'] ?? '')?>  name = "masculino">Masculino</option>
-                            <option value="feminino" <?php echo htmlspecialchars($dados['sexo'] ?? '')?> name = "feminino">Feminino</option>
-                            <option value="outro" <?php echo htmlspecialchars($dados['sexo'] ?? '')?> name = "outro">Outro</option>
+                            <option value="S"<?php echo htmlspecialchars($dados['sexo'] ?? '') ?> name = "S">Selecione</option>
+                            <option value="masculino" <?php echo htmlspecialchars($dados['sexo'] ?? '')?>  name = "M">Masculino</option>
+                            <option value="feminino" <?php echo htmlspecialchars($dados['sexo'] ?? '')?> name = "F">Feminino</option>
+                            <option value="outro" <?php echo htmlspecialchars($dados['sexo'] ?? '')?> name = "O">Outro</option>
                         </select>
                         <p style="color: red;"><?php echo $erros["sexo"] ?? ""; ?></p>
                     </div>
